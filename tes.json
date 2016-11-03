@@ -34,20 +34,7 @@
                         "Type": "AWS::EC2::Subnet::Id",
                         "Default": "subnet-12345"
                 },
-                "UserData": {
-                                        "Fn::Base64": {
-                                                "Fn::Join": ["", [
-                                                        "#!/bin/bash -v\n",
-                                                        "curl -o /tmp/bootchef.sh http://35.162.164.97/var/www/html/bootchef.sh\n",
-                                                        "chmod +x /tmp/bootchef.sh\n",
-                                                        "/bin/bash /tmp/bootchef.sh\n",
-                                                        "/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
-                                                        "Ref": "WaitHandle"
-                                                        }, 
-
-                                                ]]
-                                        }
-                                }
+                
 
         },
 "Resources" : {
@@ -69,6 +56,20 @@
                         "KeyName": {
                                 "Ref": "KeyName"
                         }
+						"UserData": {
+                                        "Fn::Base64": {
+                                                "Fn::Join": ["", [
+                                                        "#!/bin/bash -v\n",
+                                                        "curl -o /tmp/bootchef.sh http://35.162.164.97/var/www/html/bootchef.sh\n",
+                                                        "chmod +x /tmp/bootchef.sh\n",
+                                                        "/bin/bash /tmp/bootchef.sh\n",
+                                                        "/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
+                                                        "Ref": "WaitHandle"
+                                                        }, 
+
+                                                ]]
+                                        }
+                                }
                 }
         }
 }
