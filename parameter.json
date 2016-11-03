@@ -1,7 +1,7 @@
  [
    {
     "ParameterKey": "ImageID",
-    "ParameterValue": "ami-07e6c437"
+    "ParameterValue": "ami-775e4f16"
     },
 
    {
@@ -11,7 +11,7 @@
    
    {
        "ParameterKey": "KeyName",
-       "ParameterValue": "instancepem"
+       "ParameterValue": "aws"
     },
 
     {
@@ -21,7 +21,7 @@
 
     {
 	"ParameterKey": "InstanceSecurityGroup",
-	"ParameterValue": "sg-422aac3b"
+	"ParameterValue": "sg-cc0571b5"
     }
 	
 ]
