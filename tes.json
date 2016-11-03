@@ -43,7 +43,7 @@
                                                         "/bin/bash /tmp/bootchef.sh\n",
                                                         "/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
                                                         "Ref": "WaitHandle"
-                                                        }, "'\n"
+                                                        }, 
 
                                                 ]]
                                         }
