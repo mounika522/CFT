@@ -63,7 +63,7 @@
                                                         "curl -o /tmp/bootchef.sh http://35.164.35.156/bootchef.sh\n",
                                                         "chmod +x /tmp/bootchef.sh\n",
                                                         "/bin/bash /tmp/bootchef.sh\n",
-														"/bin/bash -x bootchef.sh > file.log 2>&1"
+														"/bin/bash -x bootchef.sh > file.log 2>&1",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
 							}, "'\n"
